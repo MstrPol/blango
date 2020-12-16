@@ -1,0 +1,17 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  {% for post in object_list %}
+      <table width="100%">
+        <tr>
+            <td>{{ post.title }}</td>
+            <td>Rating: {{ post.rating }}</td>
+        </tr>
+      </table>
+    <div class="post-entry">
+      <h2><a href={% url 'post_detail' post.pk %}>{{ post.title }}</a></h2>
+      <p>{{ post.content }}</p>
+    </div>
+  {% endfor %}
+{% endblock content %}
