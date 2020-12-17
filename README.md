@@ -7,5 +7,5 @@ ____
 - python manage.py makemigrations
 - python manage.py migrate
 - python manage.py runserver
-##Тесты
+## Тесты
 - python manage.py test
